@@ -281,8 +281,8 @@
             border-top: 1px solid rgba(26, 36, 32, 0.06);
         }
         .d2-manifesto-text {
-            font-family: 'Instrument Serif', serif;
-            font-size: 56px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 49px;
             line-height: 1.15;
             letter-spacing: -1px;
             font-weight: 400;
@@ -774,6 +774,81 @@
         .d2-use-arrow { color: rgba(232, 235, 230, 0.4); transition: all 0.3s; }
         .d2-use-item:hover .d2-use-arrow { color: #a8c8b8; transform: translateX(4px); }
 
+        /* TEAM */
+        .d2-team {
+            padding: 120px 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .d2-team-header {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 60px;
+            margin-bottom: 64px;
+            align-items: end;
+        }
+        .d2-team-eyebrow {
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #4a7a5e;
+            margin-bottom: 18px;
+        }
+        .d2-team-title {
+            font-family: 'Instrument Serif', serif;
+            font-size: 56px;
+            line-height: 1.05;
+            letter-spacing: -1.2px;
+            color: #1a2420;
+        }
+        .d2-team-title em { font-style: italic; color: #4a7a5e; }
+        .d2-team-desc {
+            font-size: 17px;
+            line-height: 1.6;
+            color: rgba(26, 36, 32, 0.62);
+        }
+        .d2-team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        .d2-team-card {
+            background: #fafbf8;
+            padding: 40px 32px 44px;
+            transition: background 0.3s;
+        }
+        .d2-team-card:hover { background: #fff; }
+        .d2-team-photo {
+            width: 88px; height: 88px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 24px;
+        }
+        .d2-team-name {
+            font-family: 'Instrument Serif', serif;
+            font-size: 26px;
+            letter-spacing: -0.5px;
+            color: #1a2420;
+        }
+        .d2-team-role {
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            color: #4a7a5e;
+            margin-top: 6px;
+            margin-bottom: 18px;
+        }
+        .d2-team-bio {
+            font-size: 15px;
+            line-height: 1.65;
+            color: rgba(26, 36, 32, 0.62);
+            letter-spacing: 0.01em;
+        }
+        @media (max-width: 900px) {
+            .d2-team-header { grid-template-columns: 1fr; }
+            .d2-team-grid { grid-template-columns: 1fr; }
+        }
+
         /* FINAL CTA */
         .d2-final {
             padding: 160px 48px 80px;
@@ -949,6 +1024,12 @@
             { num: 'ii.', title: 'Family rooms', desc: 'A place for the people you grew up with — without the noise of social.', members: [PORTRAITS.nadia, PORTRAITS.ravi, PORTRAITS.lina] },
             { num: 'iii.', title: 'Ritual & practice', desc: 'Meditation circles, prayer groups, somatic gatherings — together, weekly.', members: [PORTRAITS.kim, PORTRAITS.jonas, PORTRAITS.sela] },
             { num: 'iv.', title: 'Close friends', desc: 'For the four, six, eight humans who really know you. A home for them.', members: [PORTRAITS.maya, PORTRAITS.theo, PORTRAITS.aiden] },
+        ];
+
+        const TEAM = [
+            { name: 'Tree Willard', role: 'Co-Founder', photo: '/images/team/tree-willard.jpg', bio: "2Spirit Cherokee citizen building the new economy from the inside out — through healing, song, circle, and story. Studies at LIFT Economy's Next Economy MBA." },
+            { name: 'Victor Vorski', role: 'Co-Founder', photo: '/images/team/victor-vorski.jpg', bio: 'Founder of The Coherence Company, building collaboration infrastructure for the AI era. McGill MBA grad exploring regenerative, teal-style leadership.' },
+            { name: 'Michael Leifer', role: 'Co-Founder', photo: '/images/team/michael-leifer.jpg', bio: 'Cultural anthropologist and serial entrepreneur, founder of CircleUp and TownFlyr — creating a being space online instead of a doing space. UCLA grad.' },
         ];
 
         // Heroscene with circle of figures around a center
@@ -1270,6 +1351,28 @@
                                     </div>
                                 ))}
                             </div>
+                        </div>
+                    </section>
+
+                    <section className="d2-team" id="team">
+                        <div className="d2-team-header">
+                            <div>
+                                <div className="d2-team-eyebrow">Who's behind it</div>
+                                <h2 className="d2-team-title">The <em>circle</em> that started it.</h2>
+                            </div>
+                            <p className="d2-team-desc">
+                                Circles is built by people who've spent years thinking about presence, healing, and what it means to gather well.
+                            </p>
+                        </div>
+                        <div className="d2-team-grid">
+                            {TEAM.map((t, i) => (
+                                <div className="d2-team-card" key={i}>
+                                    <div className="d2-team-photo" style={{backgroundImage: `url(${t.photo})`}}></div>
+                                    <div className="d2-team-name">{t.name}</div>
+                                    <div className="d2-team-role">{t.role}</div>
+                                    <p className="d2-team-bio">{t.bio}</p>
+                                </div>
+                            ))}
                         </div>
                     </section>
 
