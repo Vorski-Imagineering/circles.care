@@ -976,7 +976,7 @@
                                 {scene.centerType === 'fire' && (
                                     <div style={{position:'absolute',inset:'-20%',borderRadius:'50%',overflow:'hidden',pointerEvents:'none'}}>
                                         <iframe
-                                            src="https://www.youtube.com/embed/zqzas0zBENs?autoplay=1&mute=1&loop=1&playlist=zqzas0zBENs&controls=0&modestbranding=1&playsinline=1"
+                                            src="https://www.youtube.com/embed/L_LUpnjgPso?autoplay=1&mute=1&loop=1&playlist=L_LUpnjgPso&controls=0&modestbranding=1&playsinline=1"
                                             style={{width:'100%',height:'100%',border:'none',transform:'scale(1.3)'}}
                                             allow="autoplay; encrypted-media"
                                             title="campfire"
@@ -1026,9 +1026,9 @@
                             circles
                         </div>
                         <div className="d2-nav-links">
-                            <a href="#">Manifesto</a>
-                            <a href="#">How it works</a>
-                            <a href="#">Stories</a>
+                            <a href="#manifesto">Manifesto</a>
+                            <a href="#how-it-works">How it works</a>
+                            <a href="#stories">Stories</a>
                             <button className="d2-nav-cta">Sign in</button>
                         </div>
                     </nav>
@@ -1069,7 +1069,7 @@
                         <HeroScene />
                     </section>
 
-                    <section className="d2-manifesto">
+                    <section className="d2-manifesto" id="manifesto">
                         <p className="d2-manifesto-text">
                             <span className="lit">We were never meant to live inside grey cubicles.</span> Or scrolling feeds. Or rooms full of strangers. Circles is an intimate <em>being space</em> — built for the slower, deeper way of being human.uilt for the slower, smaller way of being human.
                         </p>
@@ -1098,7 +1098,7 @@
                                 </div>
                                 <div className="d2-being-fire-video">
                                     <iframe
-                                        src="https://www.youtube.com/embed/zqzas0zBENs?autoplay=1&mute=1&loop=1&playlist=zqzas0zBENs&controls=0&modestbranding=1&playsinline=1"
+                                        src="https://www.youtube.com/embed/L_LUpnjgPso?autoplay=1&mute=1&loop=1&playlist=L_LUpnjgPso&controls=0&modestbranding=1&playsinline=1"
                                         style={{width:'100%',height:'100%',border:'none',transform:'scale(1.25)',transformOrigin:'center center'}}
                                         allow="autoplay; encrypted-media"
                                         title="campfire"
@@ -1108,7 +1108,7 @@
                         </div>
                     </section>
 
-                    <section className="d2-principles">
+                    <section className="d2-principles" id="how-it-works">
                         <div className="d2-principles-header">
                             <div>
                                 <div className="d2-principles-eyebrow">What we believe</div>
@@ -1154,7 +1154,7 @@
                         </div>
                     </section>
 
-                    <section className="d2-circles-section">
+                    <section className="d2-circles-section" id="stories">
                         <div className="d2-circles-inner">
                             <div className="d2-circles-header">
                                 <div>
@@ -1290,11 +1290,6 @@
 
                     <footer className="d2-footer">
                         <div>© 2026 circles.care · A being space</div>
-                        <div className="d2-footer-links">
-                            <a href="#">Privacy</a>
-                            <a href="#">Terms</a>
-                            <a href="#">Contact</a>
-                        </div>
                     </footer>
                 </div>
             );
